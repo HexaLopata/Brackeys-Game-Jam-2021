@@ -1,4 +1,5 @@
-﻿public class Core
+﻿using System.Collections.Generic;
+public class Core
 {
     public static Core Instance
     {
@@ -10,7 +11,10 @@
         }
     }
 
+    public List<Weapon> WeaponPull => _weapons;
+
     private static Core _instance;
+    private List<Weapon> _weapons = new List<Weapon>();
 
     private Core() { }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StandaloneWeapon : Weapon
+public class ProjectileWeapon : Weapon
 {
     [SerializeField] private Bullet _bullet;
     [Header("One shot per Fire Rate seconds")]
@@ -18,7 +18,7 @@ public class StandaloneWeapon : Weapon
         {
             for(int i = 0; i < _bulletCount; i++)
             {
-                bullet = Instantiate(_bullet, position, new Quaternion(0, 0, angle, 0));
+                bullet = Instantiate(_bullet, position, new Quaternion());
                 bullet.transform.rotation = Quaternion.Euler(0, 0, angle + Random.Range(-_angleRange, _angleRange));
             }
 

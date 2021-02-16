@@ -15,7 +15,7 @@ public class Triangle : MonoBehaviour
 
     private float _timeBetweenShots = 0f;
 
-    void Update()
+    private void Update()
     {
         var delta = Time.deltaTime;
         _timeBetweenShots += delta;
@@ -39,7 +39,7 @@ public class Triangle : MonoBehaviour
 
     private float FindAngleBetweenCursor()
     {
-        var camera = Camera.main;;
+        var camera = Camera.main;
         var mousePos2D = Input.mousePosition;
         var screenToCameraDistance = camera.nearClipPlane;
 
@@ -49,5 +49,11 @@ public class Triangle : MonoBehaviour
 
         var angle = Vector2.SignedAngle(Vector2.right, worldPointPos - transform.position);
         return angle;
+    }
+
+    public void Kill()
+    {
+        //Destroy(gameObject);
+        transform.position = new Vector3(0, 0, transform.position.z);
     }
 }

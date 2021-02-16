@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 public abstract class Weapon : MonoBehaviour
 {
     // Returns new time between shots
