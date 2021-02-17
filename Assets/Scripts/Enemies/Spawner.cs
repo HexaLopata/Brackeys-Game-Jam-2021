@@ -3,6 +3,25 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    public float DelayBetweenSpawn
+    { 
+        get => _delayBetweenSpawn;
+        set => _delayBetweenSpawn = value;
+    }
+
+    public float RandomTimeRange
+    { 
+        get => _randomTimeRange;
+        set => _randomTimeRange = value;
+    }
+
+    public List<Enemy> EnemyList
+    { 
+        get => _enemyList;
+        set => _enemyList = value;
+    }
+    
+
     [SerializeField] private float _delayBetweenSpawn;
     [SerializeField] private float _randomTimeRange = 0f;
     [Space]

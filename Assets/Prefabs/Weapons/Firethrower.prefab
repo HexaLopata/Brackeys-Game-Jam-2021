@@ -44,6 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 6464997302574698690, guid: 0f04ccabd73712f5181dff9ec20aec58, type: 3}
-  _fireRate: 0.01
+  _fireRate: 0.1
   _angleRange: 30
   _bulletCount: 1
+  _fireRatePerLevel: 0
+  _angleRangePerLevel: 0
+  _bulletCountPerLevel: 0
+  _damagePerLevel: 0.2
+  _bulletLifeTimePerLevel: 0
+  _bulletScalePerlevel: 0.02
+  _synergyIndex: 2

@@ -34,6 +34,8 @@ public abstract class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<Triangle>().Kill();
+            _dropChance = 0;
+            Dead();
         }
     }
 
@@ -61,6 +63,7 @@ public abstract class Enemy : MonoBehaviour
             var bonus = Instantiate(_bonusPrefab, transform.position, new Quaternion());
             bonus.WeaponPrefab = core.WeaponPull[Random.Range(0, core.WeaponPull.Count)];
         }
+        _dropChance = 0;
         Destroy(gameObject);
     }
 

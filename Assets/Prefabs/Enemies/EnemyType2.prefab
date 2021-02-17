@@ -147,5 +147,5 @@ MonoBehaviour:
   _dropChance: 10
   _bonusPrefab: {fileID: 6535984110180389429, guid: a3d78df3664b6da0c849cac3e87e6e78,
     type: 3}
-  _damageAnimationDuration: 0.2
+  _damageAnimationDuration: 0.1
   _speed: 4

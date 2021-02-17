@@ -18,5 +18,6 @@ public class EnemyType2 : Enemy
             var distance = _target.transform.position - transform.position;
             transform.position += distance.normalized * _speed * delta;
         }
+        _target = FindObjectOfType<Triangle>();
     }
 }

@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _damage: 10
-  _lifeTime: 0.5
+  _damage: 8
+  _lifeTime: 0.2
   _awakeSound: {fileID: 0}
 --- !u!61 &5907738299441883730
 BoxCollider2D:

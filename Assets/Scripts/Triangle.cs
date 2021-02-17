@@ -11,6 +11,7 @@ public class Triangle : MonoBehaviour
     private Vector2 _velocity = Vector2.zero;
 
     [SerializeField] private float _speed = 30f; 
+    [SerializeField] private bool _inverted = false;
     [SerializeField] private Weapon _weapon;
 
     private float _timeBetweenShots = 0f;
@@ -26,14 +27,22 @@ public class Triangle : MonoBehaviour
         transform.position += (inputVector * delta * _speed);
 
         var angle = FindAngleBetweenCursor();
+        if(_inverted)
+            angle = angle + 180;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        if(Input.GetMouseButton(0))
+        bool condition;
+        if(_weapon.AutoAttack)
+            condition = Input.GetMouseButton(0);
+        else
+            condition = Input.GetMouseButtonDown(0);
+        if(condition)
         {
             if(_weapon != null)
             {
                 _timeBetweenShots = _weapon.Shoot(_timeBetweenShots, angle, transform.position);
             }
+        
         }
     }
 
@@ -53,7 +62,12 @@ public class Triangle : MonoBehaviour
 
     public void Kill()
     {
-        //Destroy(gameObject);
-        transform.position = new Vector3(0, 0, transform.position.z);
+        Destroy(gameObject);
+        //transform.position = new Vector3(0, 0, transform.position.z);
+    }
+
+    private void OnDestroy()
+    {
+        TriangleManager.Instance.RemoveTriangle(this);
     }
 }

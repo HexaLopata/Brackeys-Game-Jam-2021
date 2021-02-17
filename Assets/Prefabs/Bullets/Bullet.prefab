@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6464997302574698691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07892175, y: 0.16286434, z: 4.0527296}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 40
-  _damage: 50
+  _damage: 15
   _lifeTime: 1
   _awakeSound: {fileID: 0}
 --- !u!61 &7052772979147223662
