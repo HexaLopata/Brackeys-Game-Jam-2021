@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6464997302574698688}
   - component: {fileID: 6464997302574698689}
   - component: {fileID: 6464997302574698690}
-  - component: {fileID: 7316841001024879030}
+  - component: {fileID: 1712139901}
   m_Layer: 0
   m_Name: Bullet 3
   m_TagString: Bullet
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6464997302574698691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07892175, y: 0.16286434, z: 4.0527296}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c9dbd2174c0c17b4bbc98c397e35fa0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b1452cddd2a599adc9132dc1ee373cd7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a83e83ea708a7498582ab19220d61a18, type: 3}
   m_Color: {r: 1, g: 0.93591106, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,12 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c57906df294960b1816d0af2b8303ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _awakeSound: {fileID: 8300000, guid: 05949acc7e5bce537a856e483306c1f8, type: 3}
   _speed: 22.5
   _damage: 15
   _lifeTime: 0.4
-  _awakeSound: {fileID: 0}
---- !u!61 &7316841001024879030
-BoxCollider2D:
+--- !u!58 &1712139901
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,16 +112,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.000000040978193}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.25}
-    newSize: {x: 0.25, y: 0.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.16916189}
-  m_EdgeRadius: 0
+  m_Radius: 0.5

@@ -53,5 +53,5 @@ MonoBehaviour:
   _bulletCountPerLevel: 0.2
   _damagePerLevel: 0.5
   _bulletLifeTimePerLevel: 0
-  _bulletScalePerlevel: 0.01
+  _bulletScalePerlevel: 0.005
   _synergyIndex: 3

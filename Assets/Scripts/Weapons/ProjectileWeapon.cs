@@ -37,7 +37,7 @@ public class ProjectileWeapon : Weapon
     [Header("Weapon synergy index")]
     [SerializeField] private int _synergyIndex;
 
-    private static int _synergyLevel = 0;
+    private int _synergyLevel = 0;
 
     public override float Shoot(float timeBetweenShots, float angle, Vector2 position)
     {

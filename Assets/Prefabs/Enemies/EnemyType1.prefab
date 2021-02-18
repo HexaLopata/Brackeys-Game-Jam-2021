@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7666213283929833034}
   - component: {fileID: 7666213283929833035}
-  - component: {fileID: 7666213283929833032}
   - component: {fileID: 7666213283929833033}
   - component: {fileID: 7666213283929833038}
+  - component: {fileID: 2102340821933824134}
   m_Layer: 0
   m_Name: EnemyType1
   m_TagString: Enemy
@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e4dde01cd07ceb33e86e76a64cba6c9f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3718bc7f7466c294beaafe1f3320038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a83e83ea708a7498582ab19220d61a18, type: 3}
   m_Color: {r: 0.022961915, g: 0.8113208, b: 0.1318889, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7666213283929833032
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7666213283929833039}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &7666213283929833033
 Rigidbody2D:
   serializedVersion: 4
@@ -148,6 +122,24 @@ MonoBehaviour:
   _bonusPrefab: {fileID: 6535984110180389429, guid: a3d78df3664b6da0c849cac3e87e6e78,
     type: 3}
   _damageAnimationDuration: 0.1
+  _damageMaterial: {fileID: 2100000, guid: d6cbfaaadc6a823368f3c9f9a1738bf2, type: 2}
+  _deathSound: {fileID: 8300000, guid: 94b59790c049a6956a8dbffe2502a838, type: 3}
   _lifeTime: 10
   _direction: {x: 1, y: 0, z: 0}
   _speed: 7
+--- !u!58 &2102340821933824134
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7666213283929833039}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

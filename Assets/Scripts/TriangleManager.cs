@@ -10,6 +10,7 @@ public class TriangleManager : MonoBehaviour
     [SerializeField] private Triangle _trianglePrefab;
     [SerializeField] private List<Triangle> _triangles = new List<Triangle>();
     [SerializeField] private float _distanceBetweenTriangles = 1f;
+    [SerializeField] private SynergySetter _synergySetter;
 
     private static TriangleManager _instance;
     private List<Vector2> _trianglesCoordinates = new List<Vector2>()
@@ -79,11 +80,14 @@ public class TriangleManager : MonoBehaviour
     private void CalculateSynergies()
     {
         var weapons = _triangles.Select(t => t.Weapon).Distinct();
+        string synergies = string.Empty;
         foreach(var weapon in weapons)
         {
             // weapons with the same types
-            var count = _triangles.Where(t => t.Weapon.SynergyIndex == weapon.SynergyIndex).Count();
+            var count = _triangles.Count(t => t.Weapon.SynergyIndex == weapon.SynergyIndex);
             weapon.SynergyLevel = count - 1;
+            synergies += $"{weapon.name}: {count - 1} ";
         }
+        _synergySetter.ShowSynergies(synergies);
     }
 }

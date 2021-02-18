@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6165d86c325c05b3bab5a4794575af08, type: 3}
   m_Name: Wave1
   m_EditorClassIdentifier: 
-  delayBetweenSpawnTOP: 20
-  randomTimeRangeTOP: 5
+  delayBetweenSpawnTOP: 30
+  randomTimeRangeTOP: 15
   enemyPullTOP:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
-  delayBetweenSpawnBOTTOM: 20
-  randomTimeRangeBOTTOM: 5
+  delayBetweenSpawnBOTTOM: 30
+  randomTimeRangeBOTTOM: 10
   enemyPullBOTTOM:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
-  delayBetweenSpawnLEFT: 20
-  randomTimeRangeLEFT: 5
+  delayBetweenSpawnLEFT: 30
+  randomTimeRangeLEFT: 10
   enemyPullLEFT:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
-  delayBetweenSpawnRIGHT: 20
-  randomTimeRangeRIGHT: 5
+  delayBetweenSpawnRIGHT: 30
+  randomTimeRangeRIGHT: 10
   enemyPullRIGHT:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
   timeInSeconds: 60

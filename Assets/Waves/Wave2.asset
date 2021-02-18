@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6165d86c325c05b3bab5a4794575af08, type: 3}
   m_Name: Wave2
   m_EditorClassIdentifier: 
-  delayBetweenSpawnTOP: 10
-  randomTimeRangeTOP: 5
+  delayBetweenSpawnTOP: 15
+  randomTimeRangeTOP: 8
   enemyPullTOP:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
   - {fileID: 7666213283929833038, guid: 078ab8f6c51dcad39af365b29b4f11a8, type: 3}
-  delayBetweenSpawnBOTTOM: 10
-  randomTimeRangeBOTTOM: 5
+  delayBetweenSpawnBOTTOM: 15
+  randomTimeRangeBOTTOM: 8
   enemyPullBOTTOM:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
   - {fileID: 7666213283929833038, guid: cdfe47ed9e7fdaf9180aecb97ab76225, type: 3}
-  delayBetweenSpawnLEFT: 10
-  randomTimeRangeLEFT: 5
+  delayBetweenSpawnLEFT: 15
+  randomTimeRangeLEFT: 8
   enemyPullLEFT:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
   - {fileID: 7666213283929833038, guid: f1b8f984acac8a07986761e504a7e56f, type: 3}
-  delayBetweenSpawnRIGHT: 10
-  randomTimeRangeRIGHT: 5
+  delayBetweenSpawnRIGHT: 15
+  randomTimeRangeRIGHT: 8
   enemyPullRIGHT:
   - {fileID: 525784585192695125, guid: d17dd743e1f48d679899aaeafedca62c, type: 3}
   - {fileID: 7666213283929833038, guid: eec765e2ca65179508ccabb9aa707546, type: 3}

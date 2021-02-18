@@ -6,6 +6,7 @@ public class MonoCore : MonoBehaviour
     public Core _core;
     
     [SerializeField] private List<Weapon> _weapons = new List<Weapon>();
+    [SerializeField] private AudioSource _mainAudioSource;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class MonoCore : MonoBehaviour
         {
             _core.WeaponPull.Add(weapon);
         }
+        _core.MainAudioSource = _mainAudioSource;
     }
 
 }

@@ -13,8 +13,16 @@ public class Triangle : MonoBehaviour
     [SerializeField] private float _speed = 30f; 
     [SerializeField] private bool _inverted = false;
     [SerializeField] private Weapon _weapon;
+    [SerializeField] private float _distanceBetweenBulletAndTriangle = 0.25f;
 
     private float _timeBetweenShots = 0f;
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip _deathSound;
+
+    private void Start()
+    {
+        _audioSource = Core.Instance.MainAudioSource;
+    }
 
     private void Update()
     {
@@ -29,7 +37,7 @@ public class Triangle : MonoBehaviour
         var angle = FindAngleBetweenCursor();
         if(_inverted)
             angle = angle + 180;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle - 90);
 
         bool condition;
         if(_weapon.AutoAttack)
@@ -40,7 +48,8 @@ public class Triangle : MonoBehaviour
         {
             if(_weapon != null)
             {
-                _timeBetweenShots = _weapon.Shoot(_timeBetweenShots, angle, transform.position);
+                _timeBetweenShots = _weapon.Shoot(_timeBetweenShots, angle, transform.position +
+                                                                     transform.up.normalized * _distanceBetweenBulletAndTriangle);
             }
         
         }
@@ -62,8 +71,9 @@ public class Triangle : MonoBehaviour
 
     public void Kill()
     {
+        if(_audioSource != null)
+            _audioSource.PlayOneShot(_deathSound);
         Destroy(gameObject);
-        //transform.position = new Vector3(0, 0, transform.position.z);
     }
 
     private void OnDestroy()

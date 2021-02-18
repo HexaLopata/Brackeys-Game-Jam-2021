@@ -6,6 +6,7 @@ using UnityEngine;
 public class WaveController : MonoBehaviour
 {
     public UnityEvent onWaveChanged;
+    public int WaveNumber => _waveNumber;
 
     [SerializeField] private List<Spawner> _top;
     [SerializeField] private List<Spawner> _bottom;
