@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _awakeSound: {fileID: 8300000, guid: 9708ae04c96bd2d47bf642c71d85e7ea, type: 3}
+  _soundLayer: 1
+  _maxSoundsCountOnLayer: 2
   _speed: 30
   _damage: 10
   _lifeTime: 0.1

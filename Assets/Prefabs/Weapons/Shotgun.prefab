@@ -50,8 +50,11 @@ MonoBehaviour:
   _autoAttack: 1
   _fireRatePerLevel: 0
   _angleRangePerLevel: 0
-  _bulletCountPerLevel: 0.2
-  _damagePerLevel: 0.5
+  _bulletCountPerLevel: 0.4
+  _damagePerLevel: 1
   _bulletLifeTimePerLevel: 0
-  _bulletScalePerlevel: 0.005
+  _bulletScalePerlevel: 0.01
   _synergyIndex: 3
+  _awakeSound: {fileID: 8300000, guid: 7772317fa19d35c7d94087a2a47137b9, type: 3}
+  _soundLayer: 2
+  _maxSoundsCountOnLayer: 3

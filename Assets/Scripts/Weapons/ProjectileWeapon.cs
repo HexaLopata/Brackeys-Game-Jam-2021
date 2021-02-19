@@ -37,7 +37,20 @@ public class ProjectileWeapon : Weapon
     [Header("Weapon synergy index")]
     [SerializeField] private int _synergyIndex;
 
+    [Header("Sound Settings")]
+    [SerializeField] private AudioClip _awakeSound;
+    [SerializeField] int _soundLayer;
+    [SerializeField] int _maxSoundsCountOnLayer;
+
     private int _synergyLevel = 0;
+
+    private void PlayAwakeSound()
+    {
+        if(_awakeSound != null)
+        {
+            Core.Instance.AudioSystem.TryPlaySound(_awakeSound, _soundLayer, _maxSoundsCountOnLayer);
+        }
+    }
 
     public override float Shoot(float timeBetweenShots, float angle, Vector2 position)
     {
@@ -50,6 +63,7 @@ public class ProjectileWeapon : Weapon
         Bullet bullet;
         if(timeBetweenShots >= _fireRate + additionalFireRate)
         {
+            PlayAwakeSound();
             for(int i = 0; i < _bulletCount + additionalBulletCount; i++)
             {
                 bullet = Instantiate(_bullet, position, new Quaternion());

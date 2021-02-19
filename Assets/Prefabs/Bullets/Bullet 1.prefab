@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f3febd002268bf549228eb77e6cd0f8, type: 2}
+  - {fileID: 2100000, guid: ff2b8f256cd90897d8aeac7acc5f87f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c57906df294960b1816d0af2b8303ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _awakeSound: {fileID: 8300000, guid: 05949acc7e5bce537a856e483306c1f8, type: 3}
+  _awakeSound: {fileID: 8300000, guid: 850a64bb4ab069b32afb283447c09d97, type: 3}
+  _soundLayer: 0
+  _maxSoundsCountOnLayer: 5
   _speed: 10
   _damage: 8
   _lifeTime: 0.2

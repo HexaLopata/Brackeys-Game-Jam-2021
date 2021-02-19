@@ -72,7 +72,5 @@ public class WaveController : MonoBehaviour
 
             onWaveChanged.Invoke();
         }
-    }
-
-    
+    }  
 }

@@ -11,18 +11,20 @@ public abstract class Enemy : MonoBehaviour
     [Space]
     [SerializeField] private float _damageAnimationDuration = 0.2f;
     [SerializeField] private Material _damageMaterial;
+    [SerializeField] private ParticleSystem _deathEffect;
+
+    [Header("Sound Settings")]
+    [SerializeField] private AudioClip _deathSound;
+    [SerializeField] int _soundLayer;
+    [SerializeField] int _maxSoundsCountOnLayer;
 
     private SpriteRenderer _spriteRenderer;
     private Material _defaultMaterial;
-    private AudioSource _audioSource;
-
-    [SerializeField] private AudioClip _deathSound;
 
     private void Start()
     {
         GetComponent<Collider2D>().isTrigger = true;
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _audioSource = Core.Instance.MainAudioSource;
         _defaultMaterial = _spriteRenderer.material;
         OnStart();
     } 
@@ -61,6 +63,7 @@ public abstract class Enemy : MonoBehaviour
 
     public void Dead()
     {
+        Instantiate(_deathEffect, transform.position, new Quaternion());
         if(Random.Range(1, 101) < _dropChance)
         {
             var core = Core.Instance;
@@ -68,8 +71,7 @@ public abstract class Enemy : MonoBehaviour
             var bonus = Instantiate(_bonusPrefab, transform.position, new Quaternion());
             bonus.WeaponPrefab = core.WeaponPull[Random.Range(0, core.WeaponPull.Count)];
         }
-        if(_audioSource != null)
-            _audioSource.PlayOneShot(_deathSound);
+        Core.Instance.AudioSystem.TryPlaySound(_deathSound, _soundLayer, _maxSoundsCountOnLayer);
         _dropChance = 0;
         Destroy(gameObject);
     }

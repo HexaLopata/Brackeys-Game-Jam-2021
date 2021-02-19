@@ -100,7 +100,11 @@ MonoBehaviour:
   _inverted: 0
   _weapon: {fileID: 2258723680661120363, guid: c7eb4e7c9aa01b5dd85786c5b946a06d, type: 3}
   _distanceBetweenBulletAndTriangle: 0.28
+  _deathEffect: {fileID: 2234729362896262198, guid: 4b27d7c190c17b1c197badbb0dba91a7,
+    type: 3}
   _deathSound: {fileID: 8300000, guid: 94b59790c049a6956a8dbffe2502a838, type: 3}
+  _soundLayer: 4
+  _maxSoundsCountOnLayer: 1
 --- !u!70 &337543324305352894
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

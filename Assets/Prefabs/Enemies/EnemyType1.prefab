@@ -121,9 +121,13 @@ MonoBehaviour:
   _dropChance: 25
   _bonusPrefab: {fileID: 6535984110180389429, guid: a3d78df3664b6da0c849cac3e87e6e78,
     type: 3}
-  _damageAnimationDuration: 0.1
+  _damageAnimationDuration: 0.05
   _damageMaterial: {fileID: 2100000, guid: d6cbfaaadc6a823368f3c9f9a1738bf2, type: 2}
+  _deathEffect: {fileID: 2234729362896262198, guid: 4b27d7c190c17b1c197badbb0dba91a7,
+    type: 3}
   _deathSound: {fileID: 8300000, guid: 94b59790c049a6956a8dbffe2502a838, type: 3}
+  _soundLayer: 5
+  _maxSoundsCountOnLayer: 3
   _lifeTime: 10
   _direction: {x: 1, y: 0, z: 0}
   _speed: 7

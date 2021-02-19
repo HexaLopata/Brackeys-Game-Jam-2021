@@ -9,7 +9,7 @@ public class WaveNumberSetter : MonoBehaviour
 
     private Text _text;
 
-    private void Start()
+    private void Awake()
     {
         _text = GetComponent<Text>();
     }

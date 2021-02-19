@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriangleManager : MonoBehaviour
 {
     public static TriangleManager Instance => _instance;
+    public UnityEvent onGameOver;
 
     [SerializeField] private TriangleManager _prefab;
     [SerializeField] private Triangle _trianglePrefab;
@@ -64,6 +66,8 @@ public class TriangleManager : MonoBehaviour
     public void RemoveTriangle(Triangle triangle)
     {
         _triangles.Remove(triangle);
+        if(_triangles.Count == 0)
+            onGameOver.Invoke();
         SortTriangles();
         CalculateSynergies();
     }

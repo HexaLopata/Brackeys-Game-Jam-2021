@@ -14,15 +14,13 @@ public class Triangle : MonoBehaviour
     [SerializeField] private bool _inverted = false;
     [SerializeField] private Weapon _weapon;
     [SerializeField] private float _distanceBetweenBulletAndTriangle = 0.25f;
+    [SerializeField] private ParticleSystem _deathEffect;
 
     private float _timeBetweenShots = 0f;
-    private AudioSource _audioSource;
+    [Header("Sound Settings")]
     [SerializeField] private AudioClip _deathSound;
-
-    private void Start()
-    {
-        _audioSource = Core.Instance.MainAudioSource;
-    }
+    [SerializeField] int _soundLayer;
+    [SerializeField] int _maxSoundsCountOnLayer;
 
     private void Update()
     {
@@ -71,8 +69,8 @@ public class Triangle : MonoBehaviour
 
     public void Kill()
     {
-        if(_audioSource != null)
-            _audioSource.PlayOneShot(_deathSound);
+        Instantiate(_deathEffect, transform.position, new Quaternion());
+        Core.Instance.AudioSystem.TryPlaySound(_deathSound, _soundLayer, _maxSoundsCountOnLayer);
         Destroy(gameObject);
     }
 

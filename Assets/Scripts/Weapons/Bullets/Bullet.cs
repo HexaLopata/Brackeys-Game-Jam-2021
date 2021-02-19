@@ -18,9 +18,12 @@ public class Bullet : MonoBehaviour
     private SpriteRenderer _sprite;
     private Vector3 _velocity = Vector3.zero;
     private float _livingTime = 0;
-    private AudioSource _audioSource;
+    [Header("Sound Settings")]
     [SerializeField] private AudioClip _awakeSound;
+    [SerializeField] int _soundLayer;
+    [SerializeField] int _maxSoundsCountOnLayer;
 
+    [Header("Stats")]
     [SerializeField] private float _speed;
     [SerializeField] private int _damage;
     [SerializeField] private float _lifeTime;
@@ -28,8 +31,8 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();
-        _audioSource = Core.Instance.MainAudioSource;
-        _audioSource.PlayOneShot(_awakeSound);
+        if(_awakeSound != null)
+            Core.Instance.AudioSystem.TryPlaySound(_awakeSound, _soundLayer, _maxSoundsCountOnLayer);
     }
 
     private void FixedUpdate()

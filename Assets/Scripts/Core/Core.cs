@@ -13,15 +13,15 @@ public class Core
     }
 
     public List<Weapon> WeaponPull => _weapons;
-    public AudioSource MainAudioSource 
+    public AudioSystem AudioSystem 
     {
-        get => _mainAudioSource;
-        set => _mainAudioSource = value;
+        get => _audioSystem;
+        set => _audioSystem = value;
     }
 
     private static Core _instance;
     private List<Weapon> _weapons = new List<Weapon>();
-    private AudioSource _mainAudioSource;
+    private AudioSystem _audioSystem;
 
     private Core() { }
 }

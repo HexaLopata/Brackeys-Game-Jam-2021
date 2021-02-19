@@ -51,7 +51,7 @@ MonoBehaviour:
   _fireRatePerLevel: 0
   _angleRangePerLevel: 0
   _bulletCountPerLevel: 0
-  _damagePerLevel: 0.2
+  _damagePerLevel: 0.4
   _bulletLifeTimePerLevel: 0
-  _bulletScalePerlevel: 0.02
+  _bulletScalePerlevel: 0.04
   _synergyIndex: 0
