@@ -10,12 +10,15 @@ public class ProjectileWeapon : Weapon
         set => _synergyLevel = value;
     }
 
+    public override Material BonusMaterial => _bonusMaterial;
+
     public override bool AutoAttack
     {
         get => _autoAttack;
         set => _autoAttack = value;
     }
 
+    [SerializeField] private Material _bonusMaterial;
     [SerializeField] private Bullet _bullet;
     [Header("One shot per Fire Rate seconds")]
     [SerializeField] private float _fireRate;

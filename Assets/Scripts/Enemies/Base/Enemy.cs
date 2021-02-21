@@ -61,7 +61,7 @@ public abstract class Enemy : MonoBehaviour
         _spriteRenderer.material = _defaultMaterial;
     } 
 
-    public void Dead()
+    public virtual void Dead()
     {
         Instantiate(_deathEffect, transform.position, new Quaternion());
         if(Random.Range(1, 101) < _dropChance)

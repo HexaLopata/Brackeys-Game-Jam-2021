@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6165d86c325c05b3bab5a4794575af08, type: 3}
+  m_Name: Wave8
+  m_EditorClassIdentifier: 
+  delayBetweenSpawnTOP: 17
+  randomTimeRangeTOP: 8
+  enemyPullTOP:
+  - {fileID: -4421826224955226781, guid: a4c26c6a669f3866284a2a9bf684327b, type: 3}
+  - {fileID: 7666213283929833038, guid: 078ab8f6c51dcad39af365b29b4f11a8, type: 3}
+  - {fileID: 525784585192695125, guid: 05be8c0663390358f8b82701879076d4, type: 3}
+  - {fileID: -4421826224955226781, guid: 5fa30d42f5d297cfdbeb819260147c86, type: 3}
+  - {fileID: -3998319711621232636, guid: aa701a7b48d5f3f6b9a9523a546c8aca, type: 3}
+  - {fileID: 56048170346926066, guid: ac4146fd1a9d5c0fe847d855de565dd4, type: 3}
+  delayBetweenSpawnBOTTOM: 17
+  randomTimeRangeBOTTOM: 8
+  enemyPullBOTTOM:
+  - {fileID: -4421826224955226781, guid: 5fa30d42f5d297cfdbeb819260147c86, type: 3}
+  - {fileID: 7666213283929833038, guid: cdfe47ed9e7fdaf9180aecb97ab76225, type: 3}
+  - {fileID: 525784585192695125, guid: 05be8c0663390358f8b82701879076d4, type: 3}
+  - {fileID: -3998319711621232636, guid: aa701a7b48d5f3f6b9a9523a546c8aca, type: 3}
+  delayBetweenSpawnLEFT: 17
+  randomTimeRangeLEFT: 8
+  enemyPullLEFT:
+  - {fileID: -4421826224955226781, guid: 5fa30d42f5d297cfdbeb819260147c86, type: 3}
+  - {fileID: 7666213283929833038, guid: f1b8f984acac8a07986761e504a7e56f, type: 3}
+  - {fileID: 525784585192695125, guid: 05be8c0663390358f8b82701879076d4, type: 3}
+  - {fileID: -3998319711621232636, guid: aa701a7b48d5f3f6b9a9523a546c8aca, type: 3}
+  - {fileID: 56048170346926066, guid: ac4146fd1a9d5c0fe847d855de565dd4, type: 3}
+  delayBetweenSpawnRIGHT: 17
+  randomTimeRangeRIGHT: 8
+  enemyPullRIGHT:
+  - {fileID: -3998319711621232636, guid: aa701a7b48d5f3f6b9a9523a546c8aca, type: 3}
+  - {fileID: 7666213283929833038, guid: eec765e2ca65179508ccabb9aa707546, type: 3}
+  - {fileID: 525784585192695125, guid: 05be8c0663390358f8b82701879076d4, type: 3}
+  - {fileID: -4421826224955226781, guid: 5fa30d42f5d297cfdbeb819260147c86, type: 3}
+  - {fileID: -4421826224955226781, guid: a4c26c6a669f3866284a2a9bf684327b, type: 3}
+  - {fileID: 56048170346926066, guid: ac4146fd1a9d5c0fe847d855de565dd4, type: 3}
+  timeInSeconds: 60

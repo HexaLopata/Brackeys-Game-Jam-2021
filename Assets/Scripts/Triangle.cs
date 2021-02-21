@@ -29,7 +29,7 @@ public class Triangle : MonoBehaviour
         Vector3 inputVector = new Vector3(0, 0, 0);
         inputVector.x = Input.GetAxis("Horizontal");
         inputVector.y = Input.GetAxis("Vertical");
-
+        
         transform.position += (inputVector * delta * _speed);
 
         var angle = FindAngleBetweenCursor();
@@ -47,7 +47,7 @@ public class Triangle : MonoBehaviour
             if(_weapon != null)
             {
                 _timeBetweenShots = _weapon.Shoot(_timeBetweenShots, angle, transform.position +
-                                                                     transform.up.normalized * _distanceBetweenBulletAndTriangle);
+                                                     transform.up.normalized * _distanceBetweenBulletAndTriangle);
             }
         
         }

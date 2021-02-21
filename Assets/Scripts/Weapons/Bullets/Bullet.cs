@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private int _damage;
     [SerializeField] private float _lifeTime;
+    [SerializeField] private bool _playerTeam = true;
 
     private void Start()
     {
@@ -45,10 +46,22 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if(_playerTeam)
         {
-            other.gameObject.GetComponent<Enemy>().TakeDamage(_damage);
+            if(other.gameObject.tag == "Enemy")
+            {
+                other.gameObject.GetComponent<Enemy>().TakeDamage(_damage);
+                Destroy(gameObject);
+            }
         }
-        Destroy(gameObject);
+        else
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                other.gameObject.GetComponent<Triangle>().Kill();
+                Destroy(gameObject);
+            }
+        }
+
     }
 }

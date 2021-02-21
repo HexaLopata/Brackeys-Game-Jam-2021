@@ -10,4 +10,6 @@ public abstract class Weapon : MonoBehaviour
     public abstract int SynergyLevel { get; set; }
 
     public abstract bool AutoAttack { get; set; }
+
+    public abstract Material BonusMaterial { get; }
 }

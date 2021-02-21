@@ -5,7 +5,11 @@ public class WeaponStand : MonoBehaviour
     public Weapon WeaponPrefab
     {
         get => _weaponPrefab;
-        set => _weaponPrefab = value;
+        set
+        {
+            _weaponPrefab = value;
+            GetComponent<SpriteRenderer>().material = _weaponPrefab.BonusMaterial;
+        } 
     }
 
     [SerializeField] private Weapon _weaponPrefab;

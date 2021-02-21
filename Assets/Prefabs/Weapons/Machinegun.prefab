@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b395ab06cdc4a0c28b92004946328fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bonusMaterial: {fileID: 2100000, guid: 8c2d809bed742f9ae8949859e68af07d, type: 2}
   _bullet: {fileID: 6464997302574698690, guid: cffde4639325fb26c9863c5c6cdacfa1, type: 3}
   _fireRate: 0.1
   _angleRange: 20
@@ -52,6 +53,9 @@ MonoBehaviour:
   _angleRangePerLevel: 1
   _bulletCountPerLevel: 0
   _damagePerLevel: -0.3
-  _bulletLifeTimePerLevel: 0.1
-  _bulletScalePerlevel: 0.008
+  _bulletLifeTimePerLevel: 0.15
+  _bulletScalePerlevel: 0.012
   _synergyIndex: 1
+  _awakeSound: {fileID: 0}
+  _soundLayer: 0
+  _maxSoundsCountOnLayer: 0

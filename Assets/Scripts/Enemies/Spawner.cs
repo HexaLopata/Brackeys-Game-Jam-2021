@@ -15,6 +15,12 @@ public class Spawner : MonoBehaviour
         set => _randomTimeRange = value;
     }
 
+    public float CurrentTimeDelay
+    {
+        get => _currentDelay;
+        set => _currentDelay = value;
+    }
+
     public List<Enemy> EnemyList
     { 
         get => _enemyList;
@@ -27,7 +33,7 @@ public class Spawner : MonoBehaviour
     [Space]
     [SerializeField] private List<Enemy> _enemyList = new List<Enemy>();
 
-    private float _currentDelay =  0f;
+    private float _currentDelay =  16f;
     private float _currentRandomTime = 0f;
 
     private void Start()

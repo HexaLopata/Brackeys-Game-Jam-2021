@@ -97,10 +97,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _awakeSound: {fileID: 8300000, guid: 850a64bb4ab069b32afb283447c09d97, type: 3}
   _soundLayer: 0
-  _maxSoundsCountOnLayer: 5
+  _maxSoundsCountOnLayer: 3
   _speed: 10
   _damage: 8
   _lifeTime: 0.2
+  _playerTeam: 1
 --- !u!58 &2332970209537916755
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -47,6 +47,7 @@ public class WaveController : MonoBehaviour
                 spawner.DelayBetweenSpawn = _currentWave.delayBetweenSpawnTOP;
                 spawner.RandomTimeRange = _currentWave.randomTimeRangeTOP;
                 spawner.EnemyList = _currentWave.enemyPullTOP;
+                spawner.CurrentTimeDelay = 0;
             }
 
             foreach(var spawner in _bottom)
@@ -54,6 +55,7 @@ public class WaveController : MonoBehaviour
                 spawner.DelayBetweenSpawn = _currentWave.delayBetweenSpawnBOTTOM;
                 spawner.RandomTimeRange = _currentWave.randomTimeRangeBOTTOM;
                 spawner.EnemyList = _currentWave.enemyPullBOTTOM;
+                spawner.CurrentTimeDelay = 0;
             }
 
             foreach(var spawner in _left)
@@ -61,6 +63,7 @@ public class WaveController : MonoBehaviour
                 spawner.DelayBetweenSpawn = _currentWave.delayBetweenSpawnLEFT;
                 spawner.RandomTimeRange = _currentWave.randomTimeRangeLEFT;
                 spawner.EnemyList = _currentWave.enemyPullLEFT;
+                spawner.CurrentTimeDelay = 0;
             }
 
             foreach(var spawner in _right)
@@ -68,6 +71,7 @@ public class WaveController : MonoBehaviour
                 spawner.DelayBetweenSpawn = _currentWave.delayBetweenSpawnRIGHT;
                 spawner.RandomTimeRange = _currentWave.randomTimeRangeRIGHT;
                 spawner.EnemyList = _currentWave.enemyPullRIGHT;
+                spawner.CurrentTimeDelay = 0;
             }
 
             onWaveChanged.Invoke();
